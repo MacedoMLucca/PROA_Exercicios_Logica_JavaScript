@@ -1,0 +1,218 @@
+*
+{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	min-height: 100vh;
+}
+#box
+{
+	position:relative;
+	width: 300px;
+	height: 150px;
+	transform-style: preserve-3d;
+	transform:rotateX(-30deg) rotateY(80deg);
+	/*rotate this box*/ 
+	animation: animate 10s linear infinite;
+}
+@keyframes animate
+{
+	0%
+	{
+		transform:rotateX(-30deg) rotateY(360deg);
+	}
+	100%
+	{
+		transform:rotateX(-30deg) rotateY(0deg);
+	}
+}
+/*drop shadow*/
+#box::before
+{
+	content: '';
+	position: absolute;
+	top:0;
+	left:0;
+	width:300px;
+	height:300px;
+	background:rgba(0,0,0,0.1);
+	transform: rotateX(90deg) translateZ(-220px);
+	filter:blur(15px);
+}
+#box div 
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;	 
+}
+#box div span
+{
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background:#333;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+#box div span:nth-child(1)
+{
+	transform: rotateY(0deg) translate3d(0,0,100px);
+	background:#ea5c2c;
+}
+#box div span:nth-child(1)::before
+{
+	content:'';
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	/*background:url(nike.png);*/
+	background-size: 200px;
+	background-repeat: no-repeat;
+	background-position:center;
+}
+#box div span:nth-child(2)
+{
+	transform: rotateY(90deg) translate3d(0,0,200px);
+	background:#ea5c2c;
+	width: 200px;
+}
+#box div span:nth-child(3)
+{
+	transform: rotateY(180deg) translate3d(0,0,100px);
+	background:#ea5c2c;
+}
+#box div span:nth-child(3)::before
+{
+	content:'';
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	background:url(nike.png);
+	background-size: 200px;
+	background-repeat: no-repeat;
+	background-position:center;
+}
+#box div span:nth-child(4)
+{
+	transform: rotateY(270deg) translate3d(0,0,100px);
+	background:#ea5c2c;
+	width: 200px;
+}
+#box .top
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 306px;
+	height: 205px;
+	background: #fe8844;
+	display: flex;
+	align-items: center;
+	transform: rotateX(90deg) translate3d(-3px,3px,103px);
+
+}
+#box .top::before 
+{
+	content:'';
+	position: absolute;
+	width: 70px;
+	height:60px;
+	margin-left: 113px;
+	/*border:solid 10px #111;*/
+	background:#fe8844 url(nike.png);
+	background-size: 85px;
+	background-repeat: no-repeat;
+	align-items: center;
+
+
+}
+.tape
+{
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	transform: translateX(-50%) rotate(90deg);
+	width:240px;
+	height: 120px;
+	background: url(EtiquetaLateral.png);
+	background-size: 85px;
+	background-position-x:45px;
+	background-repeat: no-repeat;
+	background-position-x:180deg;
+
+
+
+}
+span:nth-child(4) .tape
+{
+	transform: translateX(-50%) rotate(270deg);
+	background-position-x:30px;
+}
+
+
+#box div span:nth-child(5)
+{
+	transform: rotateY(180deg) translate3d(2px,0px,-105px);
+	width: 306px;
+	height: 30px;
+	background:#fe8844;
+	/*border:solid 10px #111;*/
+	/*background:url(EtiquetaLateral.png);*/
+}
+#box div span:nth-child(5)::before
+{
+	content:'';
+	position: absolute;
+	width: 306px;
+	height: 200px;
+	/*background:url(nike.png);*/
+	background-size: 200px;
+	background-repeat: no-repeat;
+	background-position:center;
+}
+#box div span:nth-child(6)
+{
+	transform: rotateY(90deg) translate3d(-3px,0px,202px);
+	background:#fe8844;
+	/*border:solid 10px #111;*/
+	width: 205px;
+	height:30px ;
+
+}
+#box div span:nth-child(7)
+{
+	transform: rotateY(90deg) translate3d(-3px,0px,-106px);
+	background:#fe8844;
+	/*border:solid 10px #111;*/
+	width: 205px;
+	height:30px ;
+}
+#box div span:nth-child(8)
+{
+	transform: rotateY(180deg) translate3d(-285px,0px,98px);
+	background:#fe8844;
+	border:solid 10px #fe8844;
+	width: 1px;
+	height:30px ;
+
+}
+#box div span:nth-child(9)
+{
+	transform: rotateY(180deg) translate3d(3px,0px,98px);
+	background:#fe8844;
+	border:solid 10px #fe8844;
+	width: 1px;
+	height:30px ;
+}
