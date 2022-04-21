@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucca Macedo">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <title>Salario Hora</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(44, 43, 43);
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            border-radius: 0px 0px 0px 10px;
+            border:none;
+            text-transform: uppercase;
+        }
+        button:hover{
+            background-color: rgb(175, 175, 175);
+            border-color: 1px solid #fff;
+            color: #fff;
+        }
+        .container{
+            background-color: rgb(73, 73, 73);
+            color: #fff;
+            padding: 10px;
+            margin-top: 10%;
+            border-radius: 20px;
+            border: 2px solid; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>22) A jornada de trabalho semanal de um funcionário é de 40 horas. O funcionário que trabalhar mais<br>
+            de 40 horas receberá hora extra, cujo cálculo é o valor da hora regular com um acréscimo de 50%.<br>
+            Escreva um algoritmo que leia o número de horas trabalhadas em um mês, o salário por hora e escreva<br>
+            o salário total do funcionário, que deverá ser acrescido das horas extras, caso tenham sido trabalhadas<br>
+            (considere que o mês possua 4 semanas exatas). </h2>
+        <h3>R: <span id="resposta">-</span>  </h3>  
+        <button onclick="SalHora()">Iniciar</button>
+    </div>
+    
+</body>
+    <script src="SalHora.js"></script>
+</html>
